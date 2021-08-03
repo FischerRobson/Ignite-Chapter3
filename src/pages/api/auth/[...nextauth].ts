@@ -38,21 +38,21 @@ export default NextAuth({
                 )
               ),
               q.Match(
-                q.Index('subscripton_by_status'),
+                q.Index('subscription_by_status'),
                 "active"
               )
             ])
           )
         );
         return {
-          session,
+          ...session,
           activeSubscription: userActiveSubscription,
         };
       }
 
       catch (err) {
         return {
-          session,
+          ...session,
           activeSubscription: null,
         };
       }
