@@ -19,7 +19,7 @@ describe("ActiveLinkComponent", () => {
       </ActiveLink>
     );
 
-    debug();
+    //debug();
     expect(getByText("Home")).toBeInTheDocument();
   });
 
