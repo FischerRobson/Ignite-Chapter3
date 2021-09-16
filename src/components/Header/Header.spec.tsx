@@ -26,6 +26,8 @@ describe("HeaderComponent", () => {
       <Header />
     );
 
+    screen.logTestingPlaygroundURL(); //url do playground => sugeri querys de seleção de componentes
+
     expect(screen.getByText("Home")).toBeInTheDocument();
     expect(screen.getByText("Posts")).toBeInTheDocument();
   });
